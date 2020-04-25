@@ -16,3 +16,8 @@ describe "Add to list adds items to list" do
     end
 end
 
+describe "Check list shows the user the list" do
+	it "should show the user the list they have created" do
+		expect(check_list("shoppinglist")).to eq("bread")
+	end
+end
