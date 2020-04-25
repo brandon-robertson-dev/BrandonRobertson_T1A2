@@ -5,7 +5,7 @@ require 'rasskey'
 require 'tty-box'
 
 require_relative './classes.rb'
-require_relative './methodstestcopy.rb'
+require_relative './code.rb'
 
 module_function
 

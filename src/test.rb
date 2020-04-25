@@ -1,11 +1,18 @@
-my_hash = {"VERY HIGH" => ["jump","fall"],"HIGH" => ["fly"],"MEDIUM" => ["taken","fly"],"LOW" => [],"VERY LOW" => ["swim"]}
+require_relative './code.rb'
+require_relative './classes.rb'
+require_relative './text.rb'
 
+require 'rspec'
 
-p my_hash
-# p my_hash["MEDIUM"].delete("fly")
+describe "List creation creates lists" do
+	it "should create the selected list" do
+		expect(list_creation("shoppinglist")).to eq("my_shopping_list")
+	end
+end
 
-answer = "fly"
+describe "Add to list adds items to list" do
+    it "should add an item to the list" do
+        expect(add_to_list("shoppinglist")).to eq([bread])
+    end
+end
 
-my_hash.keys.each { |x| my_hash[x].delete("#{answer}") }
-
-p my_hash

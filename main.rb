@@ -3,7 +3,7 @@ require 'colorize'
 require 'tty-prompt'
 
 # requires the methods file to start the rest of the app
-require_relative './src/methodstestcopy.rb'
+require_relative './src/code.rb'
 require_relative './src/classes.rb'
 require_relative './src/text.rb'
 
