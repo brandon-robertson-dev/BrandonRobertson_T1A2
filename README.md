@@ -14,7 +14,14 @@ My apps primary function is to create lists and sort them, but due to adding the
 
 ### Instructions
 ---
+You will require the tty-prompt, colourize and lolize gems to run this app.
+You can run 'bundle install' in terminal to install the Gemfile.
+Then run 'ruby sorting_app.rb' in terminal to launch the app.
 
+If you have any issues you can always check the documentation in the following links for use and installation instructions.
+- [tty-prompt](https://rubygems.org/gems/tty-prompt)
+- [colorize](https://rubygems.org/gems/colorize)
+- [lolize](https://rubygems.org/gems/lolize)
 
 ### Screenshots
 ---
