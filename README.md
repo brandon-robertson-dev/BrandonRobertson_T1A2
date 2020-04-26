@@ -10,7 +10,7 @@ The purpose of the app is a nice quick way to create, sort and export lists to a
 
 ### Functionality
 ---
-
+My apps primary function is to create lists and sort them, but due to adding the Bucket list type I would like to get people to think about what they want to do in life.
 
 ### Instructions
 ---

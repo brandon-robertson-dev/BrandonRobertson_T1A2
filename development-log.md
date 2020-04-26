@@ -52,3 +52,9 @@ I added the sort function, it all works great. I didn't add it to the Bucket Lis
 ***Date:*** 24th, April 2020
 ### Remove It or Lose It
 Today I added my remove from list function to the app. Lets the user remove something from their list.
+Been trying to think of other functions to add to it.
+
+***Date:*** 25th, April 2020
+### Finding Gems and Other Little Treasures
+I added Lolize gem to colour the welcome and exit titles, Colorize gem to the menu options of tty-prompt gem.
+Updating gemfile and documentation as well today.
