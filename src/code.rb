@@ -1,4 +1,3 @@
-require 'colorize'
 require 'tty-prompt'
 
 # I set up a clear function so I don't have to keep typing it out, I really like this one
@@ -43,7 +42,7 @@ def add_to_list(list_name)
     case list_name.name
     when "Bucket"
         prompt = TTY::Prompt.new
-        importance = prompt.select(AppText.bucker_prio) do |menu|
+        importance = prompt.select(AppText.bucket_prio) do |menu|
             menu.choice "Very High", -> { "VERY HIGH" }
             menu.choice "High", -> { "HIGH" }
             menu.choice "Medium", -> { "MEDIUM" }
@@ -55,12 +54,12 @@ def add_to_list(list_name)
         list_name.list << "#{item}"
     end
     clear
-    list_choices(list_name)
+    check_list(list_name)
 end
 
 # The check list method prints out what is in the list you have created
 def check_list(list_name)
-    AppText.check
+    AppText.here
     list_name.list.each { |x| puts x }
     prompt = TTY::Prompt.new
     prompt.keypress(AppText.any_key)
@@ -131,13 +130,12 @@ end
 
 # This removes a string from the list
 def remove_list(list_name)
-    AppText.remove_text_1
+    AppText.here
     list_name.list.each { |x| puts x }
-    AppText.remove_text_2
-    answer = gets.chomp.downcase.delete(" ")
+    AppText.remove
+    answer = gets.chomp.downcase
     case list_name.name
     when "Bucket"
-        #ISSUES
         if list_name.list.values.include?(["- #{answer}"])
             list_name.list.keys.each { |x| list_name.list[x].delete("- #{answer}") }
         else
@@ -200,9 +198,11 @@ def thank_you
     end
     case answer
     when "yes"
+        clear
         user_choice
     when "exit" 
-        AppText.exit
+        colorizer = Lolize::Colorizer.new
+        colorizer.write "#{AppText.exit}"
         sleep(5)
         exit
     end
