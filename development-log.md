@@ -1,5 +1,5 @@
 # Development Log
-
+---
 ## Before Assignment
 ***Date:*** 14th, April 2020
 ### Passion Project
@@ -58,3 +58,8 @@ Been trying to think of other functions to add to it.
 ### Finding Gems and Other Little Treasures
 I added Lolize gem to colour the welcome and exit titles, Colorize gem to the menu options of tty-prompt gem.
 Updating gemfile and documentation as well today.
+I finally got git commit/push to work, I don't know why it took me so long but it's done.
+
+***Date:*** 26th, April 2020
+### Finishing of Documentation
+Finishing of all my documentation, because I only got my git commit/push thing to work yesterday just finishing up my documents and code and getting everything organised to hand in tomorrow.

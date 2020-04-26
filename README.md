@@ -17,7 +17,7 @@ My apps primary function is to create lists and sort them, but due to adding the
 You will require the tty-prompt, colorize and lolize gems to run this app.
 You will need to 'cd' into the 'sort_app' directory/
 You then run 'bundle install' in terminal to install the Gemfile.
-Then run 'ruby sorting_app.rb' in terminal to launch the app.
+Then run 'ruby sorting-app.rb' in terminal to launch the app.
 
 If you have any issues you can always check the documentation in the following links for use and installation instructions.
 - [tty-prompt](https://rubygems.org/gems/tty-prompt)
