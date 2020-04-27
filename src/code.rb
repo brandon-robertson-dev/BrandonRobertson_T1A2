@@ -134,8 +134,7 @@ end
 
 # This removes a string from the list
 def remove_list(list_name)
-    sleep(5)
-    if list_name.list.count == 0
+    if list_name.list.count == 0 or list_name.list.values == [[], [], [], [], []]
         clear
         puts "Your list is currently empty, there is nothing to remove"
         list_choices(list_name)
