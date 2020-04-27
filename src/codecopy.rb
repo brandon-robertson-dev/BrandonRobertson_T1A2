@@ -112,6 +112,7 @@ def sort_list(list_name)
             menu.choice "Reverse Alphabetical", -> { "revalpha" }
             menu.choice "Shortest to Longest item length", -> { "shorttolong" }
             menu.choice "Longest to Shortest item length", -> { "longtoshort" }
+            menu.choice "Go back", -> { "back" }
         end
         case user_input
         when "alpha"
@@ -122,6 +123,9 @@ def sort_list(list_name)
             list_name.list.sort_by!{|x| x.length}
         when "longtoshort"
             list_name.list.sort_by!{|x| x.length}.reverse!
+        when "back"
+            clear
+            list_choices(list_name)
         end
     end
     clear
@@ -130,25 +134,32 @@ end
 
 # This removes a string from the list
 def remove_list(list_name)
-    AppText.here
-    list_name.list.each { |x| puts x }
-    AppText.remove
-    answer = gets.chomp.downcase
-    case list_name.name
-    when "Bucket"
-        if list_name.list.values.include?(["- #{answer}"])
-            list_name.list.keys.each { |x| list_name.list[x].delete("- #{answer}") }
-        else
-            clear
-            AppText.no_list
-            remove_list(list_name)
-        end
+    sleep(5)
+    if list_name.list.count == 0
+        clear
+        puts "Your list is currently empty, there is nothing to remove"
+        list_choices(list_name)
     else
-        if list_name.list.include?("#{answer}")
-            list_name.list.delete("#{answer}")
+        AppText.here
+        list_name.list.each { |x| puts x }
+        AppText.remove
+        answer = gets.chomp.downcase
+        case list_name.name
+        when "Bucket"
+            if list_name.list.values.include?(["- #{answer}"])
+                list_name.list.keys.each { |x| list_name.list[x].delete("- #{answer}") }
+            else
+                clear
+                AppText.no_list
+                remove_list(list_name)
+            end
         else
-            AppText.no_list
-            remove_list(list_name)
+            if list_name.list.include?("#{answer}")
+                list_name.list.delete("#{answer}")
+            else
+                AppText.no_list
+                remove_list(list_name)
+            end
         end
     end
     clear
