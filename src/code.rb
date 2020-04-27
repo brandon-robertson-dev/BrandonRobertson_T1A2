@@ -136,7 +136,7 @@ end
 def remove_list(list_name)
     if list_name.list.count == 0 or list_name.list.values == [[], [], [], [], []]
         clear
-        puts "Your list is currently empty, there is nothing to remove"
+        AppText.empty_list
         list_choices(list_name)
     else
         AppText.here

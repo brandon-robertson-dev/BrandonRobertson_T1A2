@@ -54,6 +54,12 @@ Press any key to continue...
 ".yellow
 end
 
+def empty_list
+puts "
+Your list is currently empty, there is nothing to remove
+".red
+end
+
 def user_prompt
 puts "
 What kind of list would you like to make today?
