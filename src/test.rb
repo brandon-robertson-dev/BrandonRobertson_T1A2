@@ -4,7 +4,7 @@ require_relative './text.rb'
 
 require 'rspec'
 
-# Some tests I did to check methods as I was making them
+# Some tests I did to check methods as I was making them, they don't work anymore as my methods have changed now and require the classes
 describe "List creation creates lists" do
 	it "should create the selected list" do
 		expect(list_creation("shoppinglist")).to eq("my_shopping_list")

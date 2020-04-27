@@ -63,3 +63,12 @@ I finally got git commit/push to work, I don't know why it took me so long but i
 ***Date:*** 26th, April 2020
 ### Finishing of Documentation
 Finishing of all my documentation, because I only got my git commit/push thing to work yesterday just finishing up my documents and code and getting everything organised to hand in tomorrow.
+
+***Date:*** 27th, April 2020
+### THE FINAL CHAPTER
+Today I am finalizing my documentation, doing my help file, filling out my readme a bit more, uploading screenshots of Trello and my workflow chart.
+Keep going through my app just to make sure its working even though I know it works but I ended up finding a softlock I had made for when you tried to remove something from an empty list but that is all fixed now.
+
+#### Update 1
+Everything is now done, I'm kind of worried to submit it because I feel like more can always be done but I am happy where it's at.
+I'm excited for the next build to really dig in, plan and test before everything. It's a new process to me but I need to work on it more.

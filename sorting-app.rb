@@ -1,4 +1,4 @@
-# Requires lolize and tty-prompt gem to add some flair to the app
+# Requires lolize and tty-prompt gem to add some flair to the welcome part of the app
 require 'tty-prompt'
 require 'lolize'
 

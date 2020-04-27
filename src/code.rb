@@ -132,33 +132,43 @@ def sort_list(list_name)
     check_list(list_name)
 end
 
-# This removes a string from the list
+# This removes a string from the list and if the list is empty it returns the user to the list choices
 def remove_list(list_name)
-    if list_name.list.count == 0 or list_name.list.values == [[], [], [], [], []]
-        clear
-        AppText.empty_list
-        list_choices(list_name)
-    else
-        AppText.here
-        list_name.list.each { |x| puts x }
-        AppText.remove
-        answer = gets.chomp.downcase
-        case list_name.name
-        when "Bucket"
-            if list_name.list.values.include?(["- #{answer}"])
-                list_name.list.keys.each { |x| list_name.list[x].delete("- #{answer}") }
-            else
-                clear
-                AppText.no_list
-                remove_list(list_name)
-            end
+    case list_name.name
+    when "Bucket"
+        if list_name.list.values == [[], [], [], [], []]
+            clear
+            AppText.empty_list
+            list_choices(list_name)
         else
-            if list_name.list.include?("#{answer}")
-                list_name.list.delete("#{answer}")
-            else
-                AppText.no_list
-                remove_list(list_name)
-            end
+        end
+    else
+        if list_name.list.count == 0
+            clear
+            AppText.empty_list
+            list_choices(list_name)
+        else
+        end
+    end 
+    AppText.here
+    list_name.list.each { |x| puts x }
+    AppText.remove
+    answer = gets.chomp.downcase
+    case list_name.name
+    when "Bucket"
+        if list_name.list.values.include?(["- #{answer}"])
+            list_name.list.keys.each { |x| list_name.list[x].delete("- #{answer}") }
+        else
+            clear
+            AppText.no_list
+            remove_list(list_name)
+        end
+    else
+        if list_name.list.include?("#{answer}")
+            list_name.list.delete("#{answer}")
+        else
+            AppText.no_list
+            remove_list(list_name)
         end
     end
     clear
