@@ -3,7 +3,7 @@ module AppText
 require 'colorize'
 
 require_relative './classes.rb'
-require_relative './codecopy.rb'
+require_relative './code.rb'
 
 module_function
 
