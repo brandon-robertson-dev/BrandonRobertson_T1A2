@@ -202,7 +202,7 @@ end
 def thank_you
     AppText.thank_you
     prompt = TTY::Prompt.new
-    answer = prompt.select("Would you like to make another list?".magenta) do |menu|
+    answer = prompt.select(AppText.make_more) do |menu|
         menu.choice "Yes please, let me make another list", -> { "yes" }
         menu.choice "No thank you, I've had enough lists for now", -> { "exit" }
     end
@@ -213,7 +213,6 @@ def thank_you
     when "exit" 
         colorizer = Lolize::Colorizer.new
         colorizer.write "#{AppText.exit}"
-        sleep(5)
         exit
     end
 end

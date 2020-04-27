@@ -1,13 +1,13 @@
-# requires colorize gem to add some flair to the app
+# Requires lolize and tty-prompt gem to add some flair to the app
 require 'tty-prompt'
 require 'lolize'
 
-# requires the methods file to start the rest of the app
+# Requires the code/classes/text file to start the rest of the app
 require_relative './src/code.rb'
 require_relative './src/classes.rb'
 require_relative './src/text.rb'
 
-# This is just the welcome to the app
+# This is just the welcome to the app then it calls the method to start the app
 colorizer = Lolize::Colorizer.new
 colorizer.write "#{AppText.title}"
 prompt = TTY::Prompt.new

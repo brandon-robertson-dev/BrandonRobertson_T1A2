@@ -1,3 +1,4 @@
+# This module lets me call the text whenever I need to put text within the app
 module AppText
 
 require 'colorize'
@@ -7,6 +8,7 @@ require_relative './code.rb'
 
 module_function
 
+# These are all the text files used throughout the app
 def title 
 "
               ▀█████████▄     ▄████████    ▄████████ ███▄▄▄▄   ████████▄   ▄██████▄  ███▄▄▄▄      ▄████████             
@@ -118,6 +120,12 @@ def list_choices
 puts "
 What would you like to do to your list?
 ".light_yellow
+end
+
+def make_more
+puts "
+Would you like to make another list?
+".magenta
 end
 
 def thank_you
